@@ -1,5 +1,5 @@
 # Python-song-download-sunmusiq.com
-download songs for entire films . have to give movie link as input
+download songs for entire films . have to give movie link and directory folder as input
 
 
 STEPS TO MAKE IT WORK:
@@ -10,7 +10,7 @@ STEPS TO MAKE IT WORK:
   Inside the download_song() function, you can change the directory path to your need.
   
   
-  python song-download.py {link to the film page in sunmusiq.com}
+  python song-download.py {link to the film page in sunmusiq.com} {directory}
   
-  python song-download.py https://www.sunmusiq.com/movies/kolamavu-kokila-(coco)-2018-tamil-movie-songs-6815-starmusiq-download.html 
+  python song-download.py https://www.sunmusiq.com/movies/kolamavu-kokila-(coco)-2018-tamil-movie-songs-6815-starmusiq-download.html c:/Desktop
   
