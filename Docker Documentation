@@ -1,6 +1,6 @@
 Docker automates the repetitive tasks of setting up and configuring development environments so that developers can focus on what matters: building great software.
 
-1. DOCKER INSTALLATION:
+1. DOCKR INSTALLATION:
 sudo apt-get install \
 apt-transport-https \
 ca-certificates \
@@ -24,7 +24,7 @@ For further info on installation follow the below link.
 
 https://docs.docker.com/engine/installation/linux/ubuntu/#install-using-the-repository
 
-  https://www.linode.com/docs/applications/containers/how-to-install-docker-and-deploy-a-lamp-stack
+ https://www.linode.com/docs/applications/containers/how-to-install-docker-and-deploy-a-lamp-stack
 
 
 attach:  sudo docker exec -it 2c35ff6fbbfd bash
