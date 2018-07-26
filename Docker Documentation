@@ -24,7 +24,7 @@ For further info on installation follow the below link.
 
 https://docs.docker.com/engine/installation/linux/ubuntu/#install-using-the-repository
 
- https://www.linode.com/docs/applications/containers/how-to-install-docker-and-deploy-a-lamp-stack
+https://www.linode.com/docs/applications/containers/how-to-install-docker-and-deploy-a-lamp-stack
 
 
 attach:  sudo docker exec -it 2c35ff6fbbfd bash
