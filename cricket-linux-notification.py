@@ -3,7 +3,7 @@ import sys
 #To get the dekstop notification --> sudo apt install python3-notify2
 import notify2
 #To get the mobile notification we use TWILIO API
-from twilio.rest import Client
+# from twilio.rest import Client
 #To get the live score from cricbuzz and to install library we use --> pip install pycricbuzz
 from pycricbuzz import Cricbuzz
 
@@ -13,19 +13,22 @@ def fun():
   accountSid    = "your accoundSid"
   authToken     = "your authToken"
   # connecting to TWILIO API
-  twilioClient  = Client(accountSid, authToken)
+  # twilioClient  = Client(accountSid, authToken)
   myTwilioNumber  = "your twilio number"
   destCellPhone   = "your mobile number"
 
-  #url = "http://synd.cricbuzz.com/j2me/1.0/livematches.xml"
+  # url = "http://synd.cricbuzz.com/j2me/1.0/livematches.xml"
+  # url = "https://www.cricbuzz.com/sitemap/index.xml"
   #to extract the matches
-  cric          = Cricbuzz()
-  details     = cric.matches()
+  cric = Cricbuzz()
+  details = cric.matches()
 
+  # print details
+  # print "asdglavdlhavfhjsvlhvf.vsfksfjbsfjbsrfjbsdfjbsribfjsbfkefv"
+  exit()
   #To filter out the None objects from details
   details=filter(None, details)
   message="No match in progress"
-
   for i in details:
     if i["id"] == '8':
       # traversing i

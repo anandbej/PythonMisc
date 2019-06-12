@@ -2,9 +2,10 @@ import requests
 import os
 import random
 
-# url='http://www.musiqfile.xyz/download-7s-sng-new/download-3.ashx?Token=U29uZyQkMTI0MCQkVHlwZTIkJE9wZW5Eb3dubG9hZCQkMjAxOC0wNS0yMCAxNToxNTo1';
+url='http://www.musiqfile.xyz/download-7s-sng-new/download-3.ashx?Token=U29uZyQkMTI0MCQkVHlwZTIkJE9wZW5Eb3dubG9hZCQkMjAxOC0wNS0yMCAxNToxNTo1';
 def download_song(url):
-	save_path = 'C:/Users/Arvind/Desktop/Newfolder'
+	# save_path = 'C:/Users/Arvind/Desktop/Newfolder'
+	save_path = '/home/bej/Desktop/'
 	print "DOWNLOADING here "
 	url = 'http://www.musiqfile.xyz/download-7s-sng-new/' + url
 	print url
@@ -22,4 +23,5 @@ def download_song(url):
 	    a.write(mobj.content)
 	return 0;
 
+download_song(url);
 
