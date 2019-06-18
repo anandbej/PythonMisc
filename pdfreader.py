@@ -6,7 +6,7 @@ import pdftotext
 
 
 def textToWav(text,file_name):
-   subprocess.call(["espeak", "-w"+file_name+".wav", "-g 15", "-v+m1", text])
+   subprocess.call(["espeak", "-w"+file_name+".wav", "-g 8", "-v+f3", text])
 
 
 # creating a pdf file object 
@@ -23,11 +23,25 @@ with pdfFileObj as f:
 
 # How many pages?
 # print(len(pdf))
+pdflength = len(pdf);
 
+pages=0
+for x in xrange(1,pdflength):
+	# part = "\n\n".join(pdf[x])
+	# if pages == 10:
+
+	# pages = pages + 1;
+	# # pdf = pdf[100]
+	print pdf[x]
+	textToWav(pdf[x],'itoohadluvstory' + str(x))
+	pass
+
+exit();
 # Iterate over all the pages
-final = "\n\n".join(pdf);
-print final
-# exit();
+# final = "\n\n".join(pdf);
+# final = final.encode('ascii','ignore');
+# print final
+# print type(final.encode('ascii','ignore'));
 
 pdfFileObj.close() 
-textToWav(final,'itoohadluvstory')
+# textToWav(final,'itoohadluvstory')
