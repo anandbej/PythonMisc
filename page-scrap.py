@@ -3,31 +3,12 @@ import requests
 import sys
 import os
 import random
-import ntpath
-import glob
-import eyed3
 
 # from song_download import download_song
 from bs4 import BeautifulSoup
 
-
-def change_song_name(folder):
-	# folder = 'C:/Users/Arvind/Desktop/Newfolder/'
-	folder = folder + '/'
-	print "name changing" + folder
-	for x in glob.glob(folder + '*.mp3'):
-		if ntpath.exists(x):
-			# print os.remove(x)
-			print x
-			file_name = eyed3.load(x)
-			if hasattr(file_name, 'tag'):
-				if hasattr(file_name.tag, 'title'):
-					os.rename(x, folder + file_name.tag.title + '.mp3')
-
-
-def download_song(url, folder):
-	# save_path = 'C:/Users/Arvind/Desktop/Newfolder'
-	save_path = folder
+def download_song(url):
+	save_path = 'C:/Users/Arvind/Desktop/Newfolder'
 	print "DOWNLOADING here "
 	url = 'http://www.musiqfile.xyz/download-7s-sng-new/' + url
 	print url
@@ -48,11 +29,10 @@ def download_song(url, folder):
 
 
 
-if len(sys.argv) > 2:
+if len(sys.argv) > 1:
 	quote_page = str(sys.argv[1])
-	folder = str(sys.argv[2])
 else:
-	print 'Give url of film from sunmusiq and directory to download as Argument'
+	print 'Give url as Argument'
 	sys.exit();	
 # quote_page = 'https://www.sunmusiq.com/movies/boys-2003-tamil-movie-songs-196-starmusiq-download.html'
 
@@ -68,10 +48,10 @@ for a in hrefs:
 	sub_soup = BeautifulSoup(sub_page, 'html.parser')
 	sub_hrefs = sub_soup.find_all('a', href=True, attrs={'class': 'btn-success'})
 	for b in sub_hrefs:
-		download_song(b['href'], folder);
+		download_song(b['href']);
 		print b['href']
 
-print "changing name"
-change_song_name(folder)
+
+
 
 
